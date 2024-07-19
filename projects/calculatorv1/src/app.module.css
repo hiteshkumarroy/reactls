@@ -1,0 +1,30 @@
+.container{
+width: 270px;
+border:2px solid;
+
+}
+.dis{
+  width:80%;
+  margin: 10px;
+  height:40px;
+ border: 2px solid grey;
+  border-radius: 4px;
+}
+button{
+  width: 50px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  height:50px;
+  border-style: none;
+  background-color: rgba(231, 226, 226, 0.893);
+  border:2px solid rgb(177, 171, 171);
+
+  border-radius: 4px;
+}
+.btn{
+  max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}

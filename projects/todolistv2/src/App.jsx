@@ -14,7 +14,10 @@ const list=[{
   "date":"24/4/2024"},
 { "work":"drink milk",
   "date"
-  :"20/4/2024",}
+  :"20/4/2024",},
+{ "work":"drink coffee",
+  "date"
+  :"22/4/2024",}
 
 ]
  
