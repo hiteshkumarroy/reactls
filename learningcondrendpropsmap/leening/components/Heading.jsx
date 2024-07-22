@@ -1,9 +1,7 @@
-export default function Heading(){
+export default function Heading({handleOnKeyDown}){
   return(
     <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action active">
-    Healthy things to eat
-  </a>
+     <input type="text" placeholder='type healthy food here and add' onKeyDown={handleOnKeyDown}/>
   </div>
   )
 }

@@ -1,13 +1,20 @@
 
 import List from "./List";
-import list from "./List";
+import { useState } from "react";
+
 export default function Items(props){
   let x=false;
   let y=<p>no food hungryyyy???</p>;
 
 let {Arr}=props;
 
+let [boughtItems,setBoughtItems]=useState(["njn"]);
 
+let handleBuysButton=(item)=>{
+  let newBoughtItems=[...boughtItems,item];
+  setBoughtItems(newBoughtItems);
+   
+}
   return(
    <>
    
@@ -16,7 +23,11 @@ let {Arr}=props;
 
     {Arr.map(
    (item) => ( 
-    <List key={item} fooditem={item}/>
+    <List key={item}
+bought={boughtItems.includes(item)}
+     fooditem={item}
+     kk={()=>handleBuysButton(item)}
+     />
    )
 
    )}

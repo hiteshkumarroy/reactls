@@ -1,0 +1,16 @@
+.btnlist{
+float: right;
+background-color: green;
+color: azure;
+border-style: none;
+border: 1px solid black;
+border-radius: 3px;
+}
+
+.abc{
+background: blue;
+ color: hsl(0, 35%, 92%);
+ font-style: none;
+ text-decoration: none;
+
+}
