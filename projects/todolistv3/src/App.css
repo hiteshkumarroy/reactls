@@ -1,0 +1,23 @@
+.welcome{
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 50px;
+  font-style: oblique;
+}
+
+button{
+  min-width: 70px;
+}
+.row{
+  margin: 20px 20px 20px 20px  ;
+  border: 1px solid;
+  border-radius: 5px;
+
+}
+.container{
+text-align: left;
+}
+.title{
+  font-size: 20px;
+  font-weight: 800;
+}
