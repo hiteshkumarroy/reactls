@@ -27,7 +27,10 @@ let handleOnClick=(a,b)=>{
  if(a==="" || b===""){
   alert("please fill the todo work");
  }
-  else setList([...list,arrval]);
+  else setList((currentvalue)=>[
+    ...currentvalue,
+    arrval
+  ]);
 
 }
 
@@ -50,4 +53,4 @@ setList(arr);
   )
 }
 
-export default App
+export default App;

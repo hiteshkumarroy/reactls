@@ -1,22 +1,16 @@
-import { useState } from "react";
+import { useRef } from "react";
 import "../App.css";
 
 export default function Entertodolist({ handleOnClick }) {
-  const [a, setA] = useState("");
-  const [b, setB] = useState("");
+ const a= useRef();
+ const b= useRef();
 
-  const handleChangeA = (event) => {
-    setA(event.target.value);
-  };
-
-  const handleChangeB = (event) => {
-    setB(event.target.value);
-  };
+  
 
   const handleClick = () => {
-    handleOnClick(a, b);
-    setA("");
-    setB("");
+    handleOnClick(a.current.value, b.current.value);
+    a.current.value="";
+    b.current.value="";
   };
 
   return (
@@ -27,12 +21,11 @@ export default function Entertodolist({ handleOnClick }) {
             <input
               type="text"
               placeholder="enter Todo here"
-              value={a}
-              onChange={handleChangeA}
+            ref={a}
             />
           </div>
           <div className="col-4">
-            <input type="date" value={b} onChange={handleChangeB} />
+            <input type="date" ref={b}/>
           </div>
           <div className="col-2">
             <button
