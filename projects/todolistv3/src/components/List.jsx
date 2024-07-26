@@ -1,9 +1,12 @@
 import "../App.css"
+import { Todolistcontext } from "../store/Todo-items-store";
+import { useContext } from "react";
 export default function List(props){
-  let {work}=props;
+  const {list,deleteclick}=useContext(Todolistcontext);
+ 
   return <div>
-    {work.map(item=>
-  <div key={item.name}>
+    {list.map(item=>
+  <div key={item.work}>
   <div class="container" >
    
     <div class="row">
@@ -13,8 +16,8 @@ export default function List(props){
       <div class="col-4">
       <p>{item.date}</p>
       </div>
-      <div class="col-2">
-      <button type="button" class="btn btn-danger " onClick={()=>{props.deleteclick(item)}}>delete</button>
+      <div className="col-2">
+      <button type="button" className="btn btn-danger " onClick={()=>{deleteclick(item)}}>delete</button>
       </div>
     </div>
   </div>

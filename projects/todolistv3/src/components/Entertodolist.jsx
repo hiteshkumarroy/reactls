@@ -1,7 +1,10 @@
 import { useRef } from "react";
 import "../App.css";
+import { useContext } from "react";
+import { Todolistcontext } from "../store/Todo-items-store";
 
-export default function Entertodolist({ handleOnClick }) {
+export default function Entertodolist() {
+  const { handleOnClick } = useContext(Todolistcontext);
  const a= useRef();
  const b= useRef();
 
