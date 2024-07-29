@@ -1,17 +1,23 @@
-export default function Card(){
-  return(
+import React from 'react';
+import "../App.css";
+
+export default function Card({ post,deleteposthandler }) {
+  return (
     <>
-    <div class="row1">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  </div>
-  </>
-  )
-};
+      {post.map((item, index) => (
+        <div className=" post" key={index}>
+          <div >
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <p className="card-text">{item.body}</p>
+                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <a href="#" className="btn btn-danger" onClick={()=>{deleteposthandler(item.title)}}>delete post</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+}

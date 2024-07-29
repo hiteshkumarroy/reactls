@@ -1,4 +1,6 @@
-export default function Sidebar(){
+import { useState } from "react";
+export default function Sidebar({createpostform,showpost}){
+let [color,setcolor]=useState(true);
   return (
     <>
     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: "220px",height:"100vh"}}>
@@ -9,14 +11,19 @@ export default function Sidebar(){
     </a>
     <hr/>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+      <li class="nav-item ">
+        <a href="#" className={` nav-link text-white ${color && "active"} `} aria-current="page" onClick={()=>{showpost()
+          setcolor(true);}
+        }>
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Home
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="#" class={`nav-link text-white ${!color && "active"} `} onClick={()=>{
+          setcolor(false);
+          createpostform();
+        }}>
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
           create post
         </a>
